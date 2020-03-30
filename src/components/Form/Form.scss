@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h3 {
+    margin-bottom: 12px;
+  }
+}
+
+.form .form__input {
+  margin-bottom: 8px;
+}
+
+.form .form__button {
+  margin: 8px 0;
+}

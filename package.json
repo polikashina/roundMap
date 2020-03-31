@@ -29,10 +29,17 @@
     "build": "react-scripts build",
     "prettier": "prettier --write \"./src/**/*.{tsx,js,scss}\"",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
   },
   "browserslist": {
     "production": [
@@ -50,6 +57,7 @@
     "@storybook/addon-actions": "^5.3.13",
     "@storybook/addons": "^5.3.13",
     "@storybook/react": "^5.3.13",
+    "@types/jest": "^25.1.4",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
     "@typescript-eslint/parser": "^2.19.2",
     "babel-loader": "^8.0.6",
@@ -57,6 +65,8 @@
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^4.2.3",
+    "jest": "24.9.0"
   }
 }
